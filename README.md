@@ -1,2 +1,2 @@
-# quizzes-code
-Quizzes code repository
+# courses-code
+Courses and quizzes code repository
