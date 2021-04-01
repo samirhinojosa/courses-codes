@@ -43,3 +43,4 @@ for i in range(5):
     n += sample_launches.count(4)/1000
 
 print("m = ", m/5, "\nn = ", n/5, "\n")
+#print("m = ", m/5, "\nn = ", n/5, sep="\n") #`\n` will put each word in a new line
