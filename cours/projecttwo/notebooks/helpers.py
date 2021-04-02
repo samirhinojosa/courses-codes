@@ -64,7 +64,21 @@ def play(strategy, tours):
     """
     return [ 1 if play_game(strategy) else 0 for i in range(tours)]
 
+
 def play_with_numpy(tours):
+    """
+    Monty Hall problem function optimized with numpy
+
+    To see more in details "The Monty Hall problem"
+    https://en.wikipedia.org/wiki/Monty_Hall_problem 
+
+    Args:
+        tours (int): Tours samples.
+
+    Returns:
+        change_player_gains (array numpy): Result of win based on door change
+        keep_player_gains (array numpy): Result of win based on door keep
+    """
     
     good_doors = np.random.randint(0, 3, size=tours)
     first_choices = np.random.randint(0, 3, size=tours)
