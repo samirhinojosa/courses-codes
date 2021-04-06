@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 from enum import Enum
+from collections import Counter
 import numpy as np
 
 
@@ -87,5 +88,24 @@ def play_with_numpy(tours):
     keep_player_gains = (good_doors == first_choices).astype(int)
 
     return change_player_gains, keep_player_gains
+
+
+def most_common_words(labels):
+    """
+    Counts the total repetitions per word in a specific column passed.
+
+    Args:
+        labels (string): Word to count through split.
+
+    Returns:
+        None
+        print the total list of words. 
+    """
+    words = []
+    for lab in labels:
+        words += lab.split(" ")
+    counter = Counter(words)
+    for word in counter.most_common(100):
+        print(word)
 
 
